@@ -9,5 +9,8 @@ function routeComments(app)
     app.route('/comments')
         .post(commentsDBObject.addComment)
         .get(commentsDBObject.getAllComments);
+    app.route('/comments/:id')
+        .put(commentsDBObject.updateComment);
+        
 }
 module.exports = {routeComments};
